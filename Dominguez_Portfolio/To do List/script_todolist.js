@@ -11,7 +11,7 @@ taskInput.addEventListener('keypress', function (e) {
 });
 
 function addTask() {
-    const taskText = taskInput.value;
+    const taskText = taskInput.value.trim();
     if (taskText === '') {
         alert("Please enter a task");
         return;
@@ -26,8 +26,8 @@ function addTask() {
    <button class = "delete-btn">Delete</button>
     `;
 
-    li.addEventListener('Click', function (e) {
-        if (e.currentTarget.addEventListener.tagName === 'BUTTON') return;
+    li.addEventListener('click', function (e) {
+        if (e.target.tagName === 'BUTTON') return;
         li.classList.toggle('completed');
     });
 
